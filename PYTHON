@@ -1,0 +1,63 @@
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import os
+>>> os.chdir("C:/Users/33749/Desktop/ici")
+>>> os.getcwd
+<built-in function getcwd>
+>>> os.getcwd()
+'C:\\Users\\33749\\Desktop\\ici'
+>>> fichier = open("benaly.txt", "r")
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    fichier = open("benaly.txt", "r")
+FileNotFoundError: [Errno 2] No such file or directory: 'benaly.txt'
+>>> os.getcwd()
+'C:\\Users\\33749\\Desktop\\ici'
+>>> fichier = open("benaly.txt", "r")
+>>> contenu = fichier.read()
+>>> print (contenu)
+vvvvs
+>>> fichier = open ("benaly.txt" , "a")
+>>> fichier.write("Bonjour benaly")
+14
+>>> fichier = open ("benaly.txt, "a")
+		
+SyntaxError: invalid syntax
+>>> fichier = open ("benaly.txt", "a")
+>>> fichier.write("\nBonjour benaly")
+15
+>>> fichier.close()
+>>> fichier = open("benaly.txt", "r")
+>>> contenu = fichier.read()
+>>> print (contenu)
+vvvvsBonjour benaly
+Bonjour benaly
+>>> import os
+>>> os.getcwd()
+'C:\\Users\\33749\\Desktop\\ici'
+>>> 'C:\\Users\\33749\\Desktop\\ici'
+'C:\\Users\\33749\\Desktop\\ici'
+>>> fichier = open ("C:\\Users\\33749\\Desktop\\ici" , "a")
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    fichier = open ("C:\\Users\\33749\\Desktop\\ici" , "a")
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\33749\\Desktop\\ici'
+>>> fichier = open ("C:\\Users\\33749\\Desktop\\ici\benaly.txt" , "a")
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    fichier = open ("C:\\Users\\33749\\Desktop\\ici\benaly.txt" , "a")
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\33749\\Desktop\\ici\x08enaly.txt'
+>>> fichier = open ("C:\\Users\\33749\\Desktop\\ici\\benaly.txt" , "a")
+>>> fichier.write ("ca va benaly")
+12
+>>> fichier.close()
+>>> fichier = open("benaly.txt", "r")
+>>> print (contenu)
+vvvvsBonjour benaly
+Bonjour benaly
+>>> 
+>>>  print (contenu)
+ 
+SyntaxError: unexpected indent
+>>> fichier = open("benaly.py", "x")
+>>> 
